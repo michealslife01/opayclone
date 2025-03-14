@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..900&family=Ovo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="overflow-x-hidden leading-8 dark:bg-darkTheme">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-20 translate-y-[80%] dark:bg-darkTheme">
+        <img src="images/bg.png" alt="" class="w-full">
+    </div>
+
+    <nav class="w-full fixed px-5 xl:px-[8%] py-4 flex items-center justify-between bg-white bg-opacity-50 z-50">
+        <img src="/images/logo5.png" alt="logo" class="w-20 cursor-pointer mr-14">
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white text-black fonts-Ovo shadow-sm bg-opacity-50">
+            <li><a href="#Home" class="hover:border-b-green border-b border-black">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Service">Service</a></li>
+            <li><a href="#Experience">Experience</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <button id="theme-toggle" aria-label="Toggle dark mode" onclick="toggleDarkMode()">
+                <img src="/images/moon-line-icon.png" class="w-4" alt="Toggle dark mode">
+            </button>
+            <a href="contact" class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4">Contact <img src="/images/arrow icon.jpg" class="w-4" alt="Contact arrow"></a>
+            <button class="block md:hidden ml-4" onclick="openMenu()">
+                <img src="images/menu icon.png" alt="Menu" class="w-6">
+            </button>
+        </div>
+    </nav>
+
+    <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-black text-white duration-500">
+        <div class="absolute right-6 top-6" onclick="closeMenu()"> 
+            <img src="images/close.png" alt="Close menu" class="w-8 cursor-pointer">
+        </div>
+        <li><a href="#Home" onclick="closeMenu()">Home</a></li>
+        <li><a href="#About" onclick="closeMenu()">About</a></li>
+        <li><a href="#Service" onclick="closeMenu()">Services</a></li>
+        <li><a href="#Experience" onclick="closeMenu()">Experience</a></li>
+        <li><a href="#Contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+
+    <div id="font" class="w-11/12 max-w-3xl text-center mx-auto mb-4 h-screen flex flex-col items-center justify-center gap-4">
+        <img src="/images/profile.png" alt="Profile picture" class="rounded-full w-32">
+        <h3 class="flex justify-center font-semibold text-xl gap-2 md:text-2xl mb-3">Hi! I'm Michael Adejimi <img src="/images/hand.png" alt="Wave" class="w-6"></h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px]">Frontend Web Developer Based In Nigeria.</h1>
+        <p class="max-w-2xl mx-auto fonts-Ovo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, dicta! Atque praesentium!</p>
+        <div class="flex flex-col sm:flex-row gap-4 mt-3 align-center">
+            <a href="#Contact" class="px-10 py-3 border rounded-full bg-black text-white flex items-center gap-2 hover:bg-green-900">Contact Me</a>
+            <a href="images/profile.png" download class="px-10 py-3 border border-gray-700 rounded-full text-green-800 flex items-center gap-2 hover:bg-black">My Resume <img src="/images/download.png" alt="Download resume" class="w-6"></a>
+        </div>
+    </div>
+
+    <div id="About" class="w-full px-[12%] py-10 scroll-mt-20" style="font-family: Ovo,sans-serif;">
+        <h3 class="text-center text-lg">Introduction</h3>
+        <h1 class="text-center text-3xl">About Me</h1>
+        <div class="flex flex-col lg:flex-row items-center gap-20 mt-10">
+            <div class="max-w-max mx-auto relative">
+                <img src="images/about3.png" alt="About image" class="w-64 sm:w-80 rounded-3xl">    
+                <div class="bg-white w-1/2 aspect-square absolute right-0 bottom-20 rounded-full translate-x-1/4 translate-y-1/3 shadow-gray-500 flex items-center justify-center border-[0.5px] hover:-translate-y-2 duration-500 cursor-pointer">
+                    <img src="/images/circular2.png" alt="Circular icon" class="w-30"> 
+                </div>    
+            </div>   
+            <div class="flex-1">
+                <p class="mb-10 max-w-2xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum assumenda mollitia earum maiores consectetur velit aliquam ipsum harum similique necessitatibus.</p>
+                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                    <li class="border-[0.5px] border-gray-700 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_black]">
+                        <img src="images/code icon.png" alt="Code icon" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
+                        <p>HTML, CSS, JavaScript, React, C++, C#, Java</p>
+                    </li>
+                    <li class="border-[0.5px] border-gray-700 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_black]">
+                        <img src="images/eudcation.png" alt="Education icon" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">Education</h3>
+                        <p>B.Sc in Computer Tech, CompTIA Network Security Certification</p>
+                    </li>
+                    <li class="border-[0.5px] border-gray-700 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_black]">
+                        <img src="images/projects.png" alt="Projects icon" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">Projects</h3>
+                        <p>All projects will be available on my GitHub page.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="Service" class="py-20 px-[12%]">
+        <h1 class="text-center text-3xl">My Services</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+            <div class="p-6 border border-gray-400 rounded-xl flex flex-col gap-6 hover:scale-105 duration-300 shadow-lg">
+                <h3 class="text-lg font-semibold">Web Design</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, qui!</p>
+                <a href="#" class="mt-auto border border-gray-600 text-gray-600 hover:bg-black hover:text-white rounded-full py-2 px-5 text-center">View More</a>
+            </div>
+            <div class="p-6 border border-gray-400 rounded-xl flex flex-col gap-6 hover:scale-105 duration-300 shadow-lg">
+                <h3 class="text-lg font-semibold">Web Development</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, qui!</p>
+                <a href="#" class="mt-auto border border-gray-600 text-gray-600 hover:bg-black hover:text-white rounded-full py-2 px-5 text-center">View More</a>
+            </div>
+            <div class="p-6 border border-gray-400 rounded-xl flex flex-col gap-6 hover:scale-105 duration-300 shadow-lg">
+                <h3 class="text-lg font-semibold">SEO Optimization</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, qui!</p>
+                <a href="#" class="mt-auto border border-gray-600 text-gray-600 hover:bg-black hover:text-white rounded-full py-2 px-5 text-center">View More</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="Experience" class="py-20 px-[12%]">
+        <h1 class="text-center text-3xl">My Experience</h1>
+        <div class="flex flex-col gap-10 mt-10">
+            <div class="flex items-center gap-6">
+                <div class="rounded-full border border-gray-600 p-3">
+                    <img src="/images/personal.png" alt="Experience icon" class="w-8">
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold">Frontend Developer</h3>
+                    <p class="text-gray-600">XYZ Company | Jan 2022 - Present</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, sint!</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="rounded-full border border-gray-600 p-3">
+                    <img src="/images/personal.png" alt="Experience icon" class="w-8">
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold">Web Designer</h3>
+                    <p class="text-gray-600">ABC Agency | May 2020 - Dec 2021</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, sint!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Contact" class="py-20 px-[12%]">
+        <h1 class="text-center text-3xl">Contact Me</h1>
+        <form action="#" method="post" class="max-w-xl mx-auto mt-10">
+            <div class="flex flex-col gap-4">
+                <input type="text" name="name" placeholder="Your Name" required class="border border-gray-400 rounded-md p-2">
+                <input type="email" name="email" placeholder="Your Email" required class="border border-gray-400 rounded-md p-2">
+                <textarea name="message" rows="4" placeholder="Your Message" required class="border border-gray-400 rounded-md p-2"></textarea>
+                <button type="submit" class="bg-black text-white rounded-md py-2 hover:bg-green-700 transition">Send Message</button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="py-5 text-center">
+        <p class="text-gray-600">© 2024 Michael Adejimi. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

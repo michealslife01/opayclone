@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="overflow-x-hidden">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-20 translate-y-[80%]">
+        <img src="images/bg.png" alt="Background image" class="w-full">
+    </div>
+    <nav class="w-full fixed px-5 xl:px-[8%] py-4 flex items-center justify-between font-sans">
+        <img src="/images/logo.JPG" alt="Logo" class="w-20 cursor-pointer mr-14 z-50">
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm opacity-50">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <button aria-label="Toggle dark mode"><img src="/images/moon-line-icon.png" class="w-4" alt="Moon icon for dark mode"></button>
+            <a href="contact" class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4">Contact <img src="/images/arrow icon.jpg" class="w-4" alt="Arrow icon"></a>
+            <button class="block md:hidden ml-4" onclick="openMenu()" aria-label="Open menu">
+                <img src="images/menu icon.png" alt="Menu icon" class="w-6">
+            </button>
+        </div>
+    </nav> 
+
+    <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-black text-white transition-transform duration-500 transform translate-x-full">
+        <div class="absolute right-6 top-6" onclick="closeMenu()" aria-label="Close menu"> 
+            <img src="images/close.png" alt="Close menu" class="w-8 cursor-pointer">
+        </div>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sideMenu = document.getElementById('sideMenu');
+
+        window.openMenu = function() {
+            sideMenu.style.transform = 'translateX(0)'; // Show the menu
+        }
+
+        window.closeMenu = function() {
+            sideMenu.style.transform = 'translateX(100%)'; // Hide the menu
+        }
+    });
+    </script>
+</body>
+</html>
